@@ -63,17 +63,6 @@ research_notes_INTERNAL/        raw dated research logs (Feb–Jul 2026); see wa
 - Code under `extensions/` was **written for the write-up and not executed on project data**. Each file
   header says so.
 
-## ⚠ Before publishing anything
-
-- `research_notes_INTERNAL/` is the raw research log. It contains **real payee and drawer names taken from
-  customer cheque ground truth**, client and bank names, and internal benchmark details. Treat it as
-  confidential. The write-up itself uses no customer names.
-- Hostnames, IPs, API tokens and personal paths have been replaced with placeholders (`<GPU_HOST>`,
-  `<INFERENCE_TENANT_HOST>`, `<API_KEY>`, `<HOME>`, `<LOCAL_PATH>`). Configure your own endpoints through
-  the `V7A_*` environment variables (`pipeline/src/v7a/config.py`).
-- No cheque images, ground-truth files, training JSONL, model weights or zips are included, on purpose.
-- `training/invizo/invizo_train.py` was vendored from a third party and imports two modules that are not
-  in this folder (`onnx_patches`, `dataset`). Credit the original author if you publish it.
 
 ## Known caveats in the run code
 
@@ -84,14 +73,3 @@ research_notes_INTERNAL/        raw dated research logs (Feb–Jul 2026); see wa
 - `train_qlora.py`: the `train()` signature defaults (r=128/α=128) differ from the CLI defaults (r=32/α=64).
   The CLI defaults are the ones that were used.
 
-## Rebuilding the PDF
-
-Requirements: Python 3 with matplotlib, pandoc 3+, Node 18+, Google Chrome.
-
-```bash
-npm install --prefix ~/.pdftools @mermaid-js/mermaid-cli@11.4.2 puppeteer-core@23.11.1   # PUPPETEER_SKIP_DOWNLOAD=1
-python figures/make_charts.py
-python figures/diagrams/diagrams_svg.py
-~/.pdftools/node_modules/.bin/mmdc -i figures/diagrams/d_serving.mmd -o figures/d_serving.svg -c figures/diagrams/mermaid.config.json -p figures/diagrams/puppeteer.json -b white
-PUPPETEER_CORE=~/.pdftools/node_modules/puppeteer-core python pdf_build/build_pdf.py
-```

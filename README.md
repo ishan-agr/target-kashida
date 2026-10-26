@@ -4,8 +4,7 @@ A technical write-up and companion code for an on-prem bank-cheque extraction sy
 around a 4-bit Qwen3-VL-8B served with vLLM on a single 24 GB GPU, plus small specialist OCR models
 ("sidecars") for handwritten Arabic.
 
-**Start here → [`TECHNICAL_WRITEUP.pdf`](TECHNICAL_WRITEUP.pdf)** (16 pages, 7 figures). Markdown source:
-[`TECHNICAL_WRITEUP.md`](TECHNICAL_WRITEUP.md).
+**Start here → [`TECHNICAL_WRITEUP.pdf`](TECHNICAL_WRITEUP.pdf)** (16 pages, 7 figures). 
 
 ## Layout
 

@@ -1,0 +1,23 @@
+# accelerate config: FSDP + QLoRA (bnb 4-bit with bf16 quant storage)
+# Requires in the training script:
+#   BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
+#                      bnb_4bit_use_double_quant=True,
+#                      bnb_4bit_compute_dtype=torch.bfloat16,
+#                      bnb_4bit_quant_storage=torch.bfloat16)   # <- lets FSDP flatten 4-bit params
+compute_environment: LOCAL_MACHINE
+distributed_type: FSDP
+mixed_precision: bf16
+num_machines: 1
+num_processes: 4
+fsdp_config:
+  fsdp_version: 1
+  fsdp_auto_wrap_policy: TRANSFORMER_BASED_WRAP
+  fsdp_transformer_layer_cls_to_wrap: Qwen3VLTextDecoderLayer,Qwen3VLVisionBlock
+  fsdp_sharding_strategy: FULL_SHARD
+  fsdp_backward_prefetch: BACKWARD_PRE
+  fsdp_state_dict_type: SHARDED_STATE_DICT
+  fsdp_offload_params: false
+  fsdp_cpu_ram_efficient_loading: true
+  fsdp_sync_module_states: true
+  fsdp_use_orig_params: true       # mixed frozen/trainable params (LoRA, frozen ViT)
+  fsdp_activation_checkpointing: true

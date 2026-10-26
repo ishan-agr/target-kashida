@@ -1,0 +1,16 @@
+flowchart TB
+  subgraph A["Path A · monolithic merge (tried twice)"]
+    direction LR
+    A1["All 5 passes"] --> A2["Merged + re-quantized model"] --> A3["Every field changes ·<br/>one bad mix breaks all"]
+  end
+  subgraph B["Path B · field-isolated LoRA (S-LoRA / Punica style)"]
+    direction LR
+    B1["Payee-crop request<br/>model = base:payee"] --> B0["Unmodified AWQ base"]
+    B2["Full / amount / date / MICR<br/>model = base"] --> B0
+    B0 --> B3["Adapter touches only the payee pass ·<br/>other fields regression-proof"]
+  end
+  A ~~~ B
+  classDef bad fill:#fef2f2,stroke:#dc2626,color:#1f2933;
+  classDef ok fill:#ecfdf5,stroke:#059669,color:#1f2933;
+  class A3 bad;
+  class B3 ok;

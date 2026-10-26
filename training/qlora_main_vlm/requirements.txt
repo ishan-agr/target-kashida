@@ -1,0 +1,28 @@
+# Requirements for merge_for_vllm.py and benchmark scripts
+# Install: pip install -r training/runpod/requirements.txt
+
+# Core ML
+torch>=2.4.0
+transformers>=4.51.0
+peft>=0.14.0
+accelerate>=1.2.0
+
+# Vision processing (fixes AutoProcessor crash)
+torchvision>=0.19.0
+Pillow>=10.0.0
+
+# AWQ quantization (pick one)
+# Option A: vLLM-recommended (preferred)
+llmcompressor>=0.5.0
+# Option B: fallback
+# autoawq>=0.2.0
+
+# Qwen VL utils (image/video preprocessing)
+qwen-vl-utils>=0.0.8
+
+# HuggingFace upload
+huggingface_hub>=0.25.0
+
+# Tokenizer
+sentencepiece>=0.2.0
+protobuf>=4.25.0

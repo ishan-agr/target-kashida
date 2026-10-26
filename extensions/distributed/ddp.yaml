@@ -1,0 +1,8 @@
+# accelerate config: plain DDP. Each rank loads the full NF4 base (~6 GB for 8B).
+# With bnb-4bit + DDP, load the model with device_map={"": accelerator.local_process_index}.
+compute_environment: LOCAL_MACHINE
+distributed_type: MULTI_GPU
+mixed_precision: bf16
+num_machines: 1
+num_processes: 2
+gpu_ids: all

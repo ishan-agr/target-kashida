@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<rect x="40" y="20" width="250" height="64" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="165.0" y="47.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Cheque scan</text>
+<text x="165.0" y="65.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">PNG · TIFF · PDF</text>
+<rect x="375" y="20" width="250" height="64" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="500.0" y="47.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Ingestion</text>
+<text x="500.0" y="65.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">deskew · sha256 · audit log</text>
+<rect x="710" y="20" width="250" height="64" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="835.0" y="47.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Layout</text>
+<text x="835.0" y="65.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">printed key + frozen offset</text>
+<polyline points="290,52 373,52" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="625,52 708,52" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<rect x="20" y="125" width="560" height="150" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="32" y="145" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#616e7c">vLLM · Qwen3-VL-8B AWQ-4bit · 5 concurrent passes</text>
+<rect x="35" y="158" width="98" height="66" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="84.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Full image</text>
+<text x="84.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">VLM pass</text>
+<rect x="143" y="158" width="98" height="66" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="192.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Payee crop</text>
+<text x="192.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">VLM pass</text>
+<rect x="251" y="158" width="98" height="66" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="300.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Amount crop</text>
+<text x="300.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">VLM pass</text>
+<rect x="359" y="158" width="98" height="66" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="408.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Date crop</text>
+<text x="408.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">VLM pass</text>
+<rect x="467" y="158" width="98" height="66" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="516.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">MICR strip</text>
+<text x="516.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">VLM pass</text>
+<rect x="600" y="125" width="150" height="150" rx="10" fill="#fff7ed" stroke="#d97706" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="612" y="145" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#616e7c">Sidecar SLM</text>
+<rect x="615" y="158" width="120" height="66" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+<text x="675.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">≤ 3 GB</text>
+<text x="675.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">payee only</text>
+<rect x="770" y="125" width="210" height="150" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="782" y="145" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#616e7c">Deterministic · CPU</text>
+<rect x="782" y="158" width="88" height="66" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="826.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Tesseract</text>
+<text x="826.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">E-13B MICR</text>
+<rect x="880" y="158" width="88" height="66" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="924.0" y="187.05" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Paddle+</text>
+<text x="924.0" y="203.35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">Easy IBAN</text>
+<polyline points="835,84 835,104 300,104 300,123" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="835,104 675,104 675,123" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="875,84 875,123" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="143,224 143,248 660,248 660,226" fill="none" stroke="#52606d" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="400" y="264" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c" font-style="italic">payee crop</text>
+<rect x="40" y="330" width="200" height="74" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="140.0" y="362.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Fusion</text>
+<text x="140.0" y="380.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">payee override · guards</text>
+<rect x="300" y="330" width="220" height="74" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="410.0" y="354.55" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Validation</text>
+<text x="410.0" y="370.85" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">mod-97 · MICR grammar</text>
+<text x="410.0" y="387.85" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" fill="#616e7c">words ↔ figures</text>
+<rect x="580" y="330" width="190" height="74" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="675.0" y="362.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Confidence</text>
+<text x="675.0" y="380.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">agree · valid · logprob</text>
+<polygon points="880,327 945,367 880,407 815,367" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="880" y="371.55" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2933">Route</text>
+<polyline points="300,275 300,295 140,295 140,328" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="675,275 675,300 200,300 200,328" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="875,275 875,312 410,312 410,328" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="240,367 298,367" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="520,367 578,367" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="770,367 813,367" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<rect x="560" y="470" width="200" height="64" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="660.0" y="497.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Straight-through</text>
+<text x="660.0" y="515.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">auto-approved</text>
+<rect x="790" y="470" width="190" height="64" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+<text x="885.0" y="497.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Maker-checker</text>
+<text x="885.0" y="515.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">human review queue</text>
+<rect x="300" y="470" width="220" height="64" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+<text x="410.0" y="497.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Active-learning pool</text>
+<text x="410.0" y="515.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c">content-addressed crops</text>
+<polyline points="880,407 880,440 660,440 660,468" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<polyline points="880,440 880,468" fill="none" stroke="#52606d" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="760" y="434" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c" font-style="italic">≥ threshold</text>
+<text x="905" y="458" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c" font-style="italic">below</text>
+<polyline points="885,534 885,562 410,562 410,536" fill="none" stroke="#52606d" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="650" y="580" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#616e7c" font-style="italic">verified crops</text>
+</svg>
